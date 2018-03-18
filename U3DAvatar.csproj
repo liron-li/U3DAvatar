@@ -219,6 +219,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AvatarSystem.cs" />
     <Compile Include="Assets\Sources\Character\Env\Glow\GlowEffect.cs" />
     <Compile Include="Assets\Sources\Character\Env\Glow\ImageEffects.cs" />
     <Compile Include="Assets\Sources\Character\Env\MirrorReflection\MirrorReflection.cs" />
