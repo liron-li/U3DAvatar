@@ -11,6 +11,7 @@ public class AvatarSystem : MonoBehaviour {
     private Dictionary<string, Dictionary<string, SkinnedMeshRenderer>> girlData = new Dictionary<string, Dictionary<string, SkinnedMeshRenderer>>();
 
     Transform[] girlHips;
+    private Dictionary<string, SkinnedMeshRenderer> girlsmr = new Dictionary<string, SkinnedMeshRenderer>();
 
     private void Start()
     {
@@ -18,17 +19,31 @@ public class AvatarSystem : MonoBehaviour {
         this.InitTarget();
 
         girlHips = girlTarget.GetComponentsInChildren<Transform>();
+        this.SavaData();
     }
 
     void InitSource()
     {
         girlSource = Instantiate(Resources.Load("FemaleModel")) as GameObject;
         girlSourceTrans = girlSource.transform;
-        girlSource.SetActive(false);
+        //girlSource.SetActive(false);
     }
 
     void InitTarget()
     {
         girlTarget = Instantiate(Resources.Load("FemaleTarget")) as GameObject;
+    }
+
+    void SavaData()
+    {
+        if (girlSourceTrans == null)
+            return;
+
+        SkinnedMeshRenderer[] parts = girlSourceTrans.GetComponentsInChildren<SkinnedMeshRenderer>();
+        foreach (var part in parts)
+        {
+            string[] names = part.name.Split('-');
+            Debug.Log(names);
+        }
     }
 }
