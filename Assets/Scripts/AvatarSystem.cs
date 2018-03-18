@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AvatarSystem : MonoBehaviour {
 
-    private GameObject girlSource; // 资源model
+    private GameObject girlSource; // 资源 model
     private GameObject girlTarget; // 骨架对象
     private Transform girlSourceTrans;
 
