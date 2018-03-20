@@ -44,6 +44,24 @@ public class AvatarSystem : MonoBehaviour {
         {
             string[] names = part.name.Split('-');
             Debug.Log(names);
+            if (!girlData.ContainsKey(names[0]))
+            {
+                GameObject partGo = new GameObject();
+                partGo.name = names[0];
+                partGo.transform.parent = girlTarget.transform;
+
+                girlsmr.Add(names[0], partGo.AddComponent<SkinnedMeshRenderer>());
+            }
         }
+    }
+
+    void ChangeMash(string part, string num)
+    {
+
+    }
+
+    void InitAvatar()
+    {
+
     }
 }
