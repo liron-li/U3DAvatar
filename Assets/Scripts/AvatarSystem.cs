@@ -95,6 +95,7 @@ public class AvatarSystem : MonoBehaviour {
         go.SetActive(false);
         girlTarget = Instantiate(Resources.Load("FemaleTarget")) as GameObject;
         girlHips = girlTarget.GetComponentsInChildren<Transform>();
+        // TODO 这里可能遇到动画不能自动播放的bug。。 目前只能用这种不靠谱的方法解决
         girlTarget.SetActive(false);
         Invoke("EnableModel", 1.0f);
     }
