@@ -322,7 +322,7 @@ GameObject:
   - component: {fileID: 111424107078283852}
   m_Layer: 0
   m_Name: FemaleTarget
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1914,5 +1914,5 @@ Animation:
   - {fileID: 7400000, guid: f81125c2f2f650143b2a3ed37e780ed3, type: 3}
   m_WrapMode: 0
   m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
+  m_AnimatePhysics: 1
   m_CullingType: 1

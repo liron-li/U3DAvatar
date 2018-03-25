@@ -95,6 +95,13 @@ public class AvatarSystem : MonoBehaviour {
         go.SetActive(false);
         girlTarget = Instantiate(Resources.Load("FemaleTarget")) as GameObject;
         girlHips = girlTarget.GetComponentsInChildren<Transform>();
+        girlTarget.SetActive(false);
+        Invoke("EnableModel", 1.0f);
+    }
+
+    void EnableModel()
+    {
+        girlTarget.SetActive(true);
     }
 
     void InitAvatarGirl()
