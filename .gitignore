@@ -3,3 +3,5 @@ Temp/
 *.DS_Store
 .vs/
 obj/
+U3DAvatar_Data
+U3DAvatar.exe
